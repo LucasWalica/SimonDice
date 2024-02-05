@@ -1,0 +1,59 @@
+#cabSalto{
+    margin-top: 30px;
+    background-image: url(../assets/CabSalto.png);
+    height: 86px;
+    width: 71.42857142857143px;
+    animation: caballero steps(7) 2s infinite;
+}
+@keyframes caballero {
+    from{background-position: 0px;}
+    to{background-position: -500px;}
+}
+/*steps 15*/
+#demSal{
+    background-image: url(../assets/DemSal.png);
+    height: 128px;
+    width: 128px;
+    animation: demon steps(15) 3s infinite;
+}
+@keyframes demon {
+    from{background-position: 0px;}
+    to{background-position: -1920px;}
+}
+/*11 septs*/
+#lobosalto{
+    background-image: url(../assets/HombreLoboSalto.png);
+    height: 128px;
+    width: 128px;
+    animation: lobo steps(11) 2s infinite;
+}
+@keyframes lobo {
+    from{background-position: 0px;}
+    to{background-position: -1408px;}
+}
+/*8 steps*/
+#samcorrer{
+    margin-left:40px;
+    height: 128px;
+    width: 128px;
+    background-image: url(../assets/SamCorrer.png);
+    animation: sam steps(8) 2s infinite;
+}
+@keyframes sam {
+    from{background-position: 0px;}
+    to{background-position: -1024px;}
+}
+
+.charcont{
+    height: 150px;
+    width: 110px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+#cab{background: linear-gradient(aquamarine, cyan);}
+#demon{background: linear-gradient(red, magenta);}
+#lobo{background: linear-gradient(green, greenyellow);}
+#samurai{background: linear-gradient(yellow, goldenrod);}

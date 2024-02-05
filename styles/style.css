@@ -1,0 +1,56 @@
+@font-face {
+    font-family: robot;
+    src: url(./RobotoSlab-VariableFont_wght.ttf);
+}
+
+html{
+    background-color: black;
+    font-family: robot;
+}
+.row, .container{
+    margin: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.row {
+    background: linear-gradient(rgb(71, 66, 66), rgb(56, 55, 55));
+}
+
+h1{
+    text-align: center;
+}
+
+
+#buttonContainer{
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+}
+button{
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(pink, aquamarine);
+    border: 2px solid magenta;
+    color: black;
+    text-shadow: 1px 2px 2px grey;
+}
+button:hover{
+    transition: 0.3s;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    background: linear-gradient(magenta, blue);
+}
+button:active{
+    transition: 0.2s;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: whitesmoke;
+    background: linear-gradient(red, violet);
+}
+
+
+#test{
+    display: inline-flex;
+}
