@@ -7,13 +7,16 @@ html{
     background-color: black;
     font-family: robot;
 }
-.row, .container{
+body{
+    background-color: black;
+}
+.bar, .cont{
     margin: 1%;
     border: 2px solid white;
     border-radius: 5px;
     color: whitesmoke;
 }
-.row {
+.bar {
     background: linear-gradient(rgb(71, 66, 66), rgb(56, 55, 55));
 }
 
@@ -54,3 +57,10 @@ button:active{
 #test{
     display: inline-flex;
 }
+
+
+#simon{
+    display: grid;
+    justify-content: center;
+}
+
