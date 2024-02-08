@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contadorRondas = document.querySelector('#roundCounter');
             contadorRondas.innerHTML = rondas;
             alert("meme")
+            eleccionesJugador = [];
         }
         else if(eleccionesJugador.join('')!==eleccionesSimon.join('') && eleccionesJugador.length===eleccionesSimon.length) {
             eleccionesJugador = [];
@@ -62,12 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
             simonRandom();
         }
     }
-
-    // listeners de jugador
     let botonesJugador = document.querySelectorAll('.charcont2');
-    botonesJugador.forEach(boton => {
+    function agregarListeners(){
+    // listeners de jugador
+        botonesJugador.forEach(boton => {
             boton.addEventListener('click', function() {
-                
                 if(eleccionesJugador.length === rondas){
                     compararElecciones();
                 }
@@ -76,5 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log("Bot:     "+eleccionesSimon.join(''));
             });
         });
+    }
 
+    agregarListeners();               
 });
