@@ -3,17 +3,14 @@ let eleccionesJugador = [];
 
 // se añade al array
 function seleccionar(data){
-    caballero = '<div class="charcont" id="cab"><div id="cabSalto"></div></div>';
-    demon = '<div class="charcont" id="demon"><div id="demSal"></div></div>'
-    lobo = '<div class="charcont" id="lobo"><div id="lobosalto"></div></div>';
-    samurai = '<div class="charcont" id="samurai"><div id="samcorrer"></div></div>';
-    // testing
     eleccionesJugador.push(data);
-    return data;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    
+    let rondas = 0;
+    let contadorRondas = document.querySelector('#roundCounter');
     // se necesitará crear constantes de las cartas 
     function simonRandom(){
 
@@ -27,7 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let espacio = document.querySelector('#simonInsertar');
         let decision = opciones[(Math.floor(Math.random() * 4))];
         espacio.innerHTML = decision;
-        eleccionesSimon.push(decision);
+        let outputArr = '';
+        if(decision===caballero){outputArr='caballero'}
+        else if(decision===demon){outputArr='demon'}
+        else if(decision===lobo){outputArr='lobo'}
+        else if(decision===samurai){outputArr='samurai'}
+        eleccionesSimon.push(outputArr);
     }
     
 
@@ -36,24 +38,43 @@ document.addEventListener('DOMContentLoaded', function() {
     iniciarButt.addEventListener('click', function(){
         simonRandom();
         rondas=1;
-        let contadorRondas = document.querySelector('#roundCounter');
+        contadorRondas = document.querySelector('#roundCounter');
         contadorRondas.innerHTML = rondas;
     });
 
 
 
+    function compararElecciones(){
+        if(eleccionesJugador.join('')===eleccionesSimon.join('') && eleccionesJugador.length === eleccionesSimon.length){
+            simonRandom();
+            rondas++;
+            contadorRondas = document.querySelector('#roundCounter');
+            contadorRondas.innerHTML = rondas;
+            alert("meme")
+        }
+        else if(eleccionesJugador.join('')!==eleccionesSimon.join('') && eleccionesJugador.length===eleccionesSimon.length) {
+            eleccionesJugador = [];
+            eleccionesSimon = [];
+            rondas = 1;
+            contadorRondas = document.querySelector('#roundCounter');
+            contadorRondas.innerHTML = rondas;
+            alert("No meme");
+            simonRandom();
+        }
+    }
+
     // listeners de jugador
     let botonesJugador = document.querySelectorAll('.charcont2');
     botonesJugador.forEach(boton => {
-        boton.addEventListener('click', function() {
-            if(eleccionesJugador.join('')===eleccionesSimon.join('')){
-                alert("meme")
-            }
-            else {alert("No meme")}
-            console.log("Jugador: "+eleccionesJugador.join(''));
-            console.log("Bot:     "+eleccionesSimon.join(''));
+            boton.addEventListener('click', function() {
+                
+                if(eleccionesJugador.length === rondas){
+                    compararElecciones();
+                }
+                
+                console.log("Jugador: "+eleccionesJugador.join(''));
+                console.log("Bot:     "+eleccionesSimon.join(''));
+            });
         });
-    });
-
 
 });
