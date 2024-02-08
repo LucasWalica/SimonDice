@@ -2,13 +2,15 @@
     font-family: robot;
     src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
 }
-
-html{
-    background-color: black;
+body{
+    background: black!important;
     font-family: robot;
 }
-body{
-    background-color: black;
+.container{
+    background: black;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
 }
 .bar, .cont{
     margin: 1%;
@@ -30,7 +32,7 @@ h1{
     display: grid;
     justify-content: center;
 }
-button{
+#butt{
     padding: 10px;
     border-radius: 20px;
     background: linear-gradient(pink, aquamarine);
@@ -38,14 +40,14 @@ button{
     color: black;
     text-shadow: 1px 2px 2px grey;
 }
-button:hover{
+#butt:hover{
     transition: 0.3s;
     padding-left: 25px;
     padding-right: 25px;
     color: white;
     background: linear-gradient(magenta, blue);
 }
-button:active{
+#butt:active{
     transition: 0.2s;
     padding-left: 30px;
     padding-right: 30px;
@@ -54,13 +56,23 @@ button:active{
 }
 
 
-#test{
-    display: inline-flex;
-}
 
 
 #simon{
     display: grid;
     justify-content: center;
 }
+
+#test{
+    display: grid;
+    justify-content:inline-block;
+}
+.space{
+    width: 400px;
+}
+#Seleccionar{
+    display: inline-flex;
+    justify-content: center;
+}
+
 

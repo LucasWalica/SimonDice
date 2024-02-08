@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/animation.css">
     <script src="app.js"></script>
+
 </head>
 <body>
     <div class="bar">
@@ -14,28 +15,44 @@
     </div>
     <div class="cont">
         <div id="buttonContainer">
-            <button>Iniciar partida</button>
+            <button id="butt">Iniciar partida</button>
         </div>
+        <!--Div de aparicion de imagenes-->
         <div class="bar" id="simon">
-            <div id="test"></div>
+            <div id="simonInsertar"></div>
         </div>
         
+        <!--Counter de rondas-->
+        <div class="bar">
+            <center><h3>Numero de Rondas: <span id="roundCounter"></span></h3></center>
+        </div>
+        
+        <!--Contenido principal de interaccion-->
         <div class="bar">
 
-            <h3>&nbsp;&nbsp;&nbsp;Pulsa en orden los personajes que haya dicho Simon</h3>
-        <div id="test">
-            <div class="charcont" id="cab">
-                <div id="cabSalto"></div>
+            <div id="test">
+                <div class="space"></div>
+                <div id="Seleccionar"><h3>Pulsa en orden los personajes restantes <span id="countRestantes"></span></h3></div>
+                <div class="space"></div>
             </div>
-            <div class="charcont" id="demon">
-                <div id="demSal"></div>
-            </div>
-            <div class="charcont" id="lobo">
-                <div id="lobosalto"></div>
-            </div>
-            <div class="charcont" id="samurai">
-                <div id="samcorrer"></div>
-            </div>
+            <div id="test">
+                <div class="space"></div>
+                <div id="Seleccionar">
+                    <button class="charcont2" id="cab2" onclick="seleccionar(cab)">
+                        <div id="cabSalto"></div>
+                    </button>
+                    <button class="charcont2" id="demon2" onclick="seleccionar(demon)">
+                        <div id="demSal"></div>
+                    </button>
+                    <button class="charcont2" id="lobo2" onclick="seleccionar(lobo)">
+                        <div id="lobosalto"></div>
+                    </button>
+                    <button class="charcont2" id="samurai2" onclick="seleccionar(samu)">
+                        <div id="samcorrer"></div>
+                    </button>
+                </div>
+                <div class="space"></div>
+
         </div>
             
         </div>

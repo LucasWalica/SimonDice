@@ -46,14 +46,50 @@
 
 .charcont{
     height: 150px;
-    width: 110px;
+    width: 90px;
     border: 2px solid black;
     border-radius: 20px;
     display: grid;
     justify-content: center;
 }
+.charcont2{
+    height: 150px;
+    width: 90px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+.charcont2:hover{
+    border: 4px solid white;
+    transition: 0.3s;
+}
+.charcont2:active{
+    border: 4px solid silver;
+    transition: 0.2s;
+}
 
 #cab{background: linear-gradient(aquamarine, cyan);}
+#cab2{background: linear-gradient(aquamarine, cyan);}
+#cab2:hover{
+    background: linear-gradient(rgb(60, 162, 162),rgb(45, 137, 107));
+    transition: 0.3s;
+}
 #demon{background: linear-gradient(red, magenta);}
+#demon2{background: linear-gradient(red, magenta);}
+#demon2:hover{
+    background: linear-gradient(rgb(92, 40, 92), rgb(114, 17, 17));
+    transition: 0.3s;
+}
 #lobo{background: linear-gradient(green, greenyellow);}
+#lobo2{background: linear-gradient(green, greenyellow);}
+#lobo2:hover{
+    background: linear-gradient(rgb(76, 101, 40), rgb(7, 72, 7));
+    transition: 0.3s;
+}
 #samurai{background: linear-gradient(yellow, goldenrod);}
+#samurai2{background: linear-gradient(yellow, goldenrod);}
+#samurai2:hover{
+    background: linear-gradient(rgb(112, 96, 56), rgb(87, 87, 11));
+    transition: 0.3s;
+}

@@ -12,19 +12,27 @@ document.addEventListener('DOMContentLoaded', function() {
     let eleccionesSimon = [];
     let eleccionesJugador = [];
 
+    // Rondas jugadas y ganadas
+    let rondas = 0;
+    let contadorRondas = document.querySelector('#roundCounter');
+    contadorRondas.innerHTML = rondas;
+    // Contador de peronajes restantes
+    let contadorRestantes = document.querySelector('#countRestantes');
+    contadorRestantes.innerHTML = rondas; 
 
-    let espacio = document.querySelector('#test');
-    let decision = opciones[(Math.floor(Math.random() * 4))];
-    espacio.innerHTML = decision;
+    // seleccion e insercion de datos en html
+    function simonRandom(){
+        let espacio = document.querySelector('#simonInsertar');
+        let decision = opciones[(Math.floor(Math.random() * 4))];
+        espacio.innerHTML = decision;
+        return decision;
+    }
     
-
-    console.log(decision);
-    console.log(espacio);
-
-
+    let vidaJugador = true;
+    // mostrar carta
+    simonRandom();
+    eleccionesSimon.push(simonRandom());
+    console.log(eleccionesSimon[0]);
 
 });
-
-// mostrar cuenta atras, mostrar suecesion random de X lenght cada vez +1 si acierta
-// añadir espacios en blanco con cartas vacias, al pulsar una, pintar espacio
 // si acierta volver a repetir ciclo
