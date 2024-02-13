@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/animation.css">
     <script src="app.js"></script>
+    <link rel="stylesheet" href="./styles/extraSmallBootStrap.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -24,35 +28,32 @@
         
         <!--Counter de rondas-->
         <div class="bar">
-            <center><h3>Numero de Rondas: <span id="roundCounter"></span></h3></center>
+            <center><h3>Ronda Número: <span id="roundCounter"></span></h3></center>
         </div>
         
         <!--Contenido principal de interaccion-->
         <div class="bar">
 
             <div id="test">
-                <div class="space"></div>
-                <div id="Seleccionar"><h3>Pulsa en orden los personajes<span id="countRestantes"></span></h3></div>
-                <div class="space"></div>
+                <center>
+                    <div id="Seleccionar"><h3>Pulsa en orden los personajes<span id="countRestantes"></span></h3></div>
+                </center>
             </div>
             <div id="test">
-                <div class="space"></div>
-                <div id="Seleccionar">
-                    <button class="charcont2" id="cab2" onclick="seleccionar('caballero')">
+                <div id="Seleccionar" class="row">
+                    <button class="col-3 col-extrasmall-3 charcont2" id="cab2" onclick="seleccionar('caballero')">
                         <div id="cabSalto"></div>
                     </button>
-                    <button class="charcont2" id="demon2" onclick="seleccionar('demon')">
+                    <button class="col-3 col-extrasmall-3 charcont2" id="demon2" onclick="seleccionar('demon')">
                         <div id="demSal"></div>
                     </button>
-                    <button class="charcont2" id="lobo2" onclick="seleccionar('lobo')">
+                    <button class="col-3 col-extrasmall-3 charcont2" id="lobo2" onclick="seleccionar('lobo')">
                         <div id="lobosalto"></div>
                     </button>
-                    <button class="charcont2" id="samurai2" onclick="seleccionar('samurai')">
+                    <button class="col-3 col-extrasmall-3 charcont2" id="samurai2" onclick="seleccionar('samurai')">
                         <div id="samcorrer"></div>
                     </button>
                 </div>
-                <div class="space"></div>
-
         </div>
             
         </div>
