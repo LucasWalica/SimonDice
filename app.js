@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
             rondas++;
             contadorRondas = document.querySelector('#roundCounter');
             contadorRondas.innerHTML = rondas;
-            alert("meme")
+            let rondaFin = document.querySelector('#rondaFin');
+            rondaFin.innerHTML = "Has Ganado la ronda.";
             eleccionesJugador = [];
         }
         else if(eleccionesJugador.join('')!==eleccionesSimon.join('') && eleccionesJugador.length===eleccionesSimon.length) {
@@ -59,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
             rondas = 1;
             contadorRondas = document.querySelector('#roundCounter');
             contadorRondas.innerHTML = rondas;
-            alert("No meme");
+            let rondaFin = document.querySelector('#rondaFin');
+            rondaFin.innerHTML = "Has Perdido la ronda.";
             simonRandom();
         }
     }
