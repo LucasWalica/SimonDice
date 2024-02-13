@@ -56,7 +56,10 @@ h1{
 }
 
 
-
+#main{
+    background: rgb(24, 12, 12);
+    border-radius: 5px;
+}
 
 #simon{
     margin: 10px;
