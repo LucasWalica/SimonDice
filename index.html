@@ -14,50 +14,62 @@
 
 </head>
 <body>
-    <div class="bar">
-        <h1>Simon Dice</h1>
-    </div>
-    <div class="cont">
-        <div id="buttonContainer">
-            <button id="butt">Iniciar partida</button>
+    <div class="container">
+        <div class="bar row">
+            <h1>Simon Dice</h1>
         </div>
-        <!--Div de aparicion de imagenes-->
-        <div class="bar" id="simon">
-            <div id="simonInsertar"></div>
-        </div>
-        
-        <!--Counter de rondas-->
-        <div class="bar">
-            <center><h3>Ronda Número: <span id="roundCounter"></span></h3></center>
-        </div>
-        
-        <!--Contenido principal de interaccion-->
-        <div class="bar">
-
-            <div id="test">
-                <center>
-                    <div id="Seleccionar"><h3>Pulsa en orden los personajes<span id="countRestantes"></span></h3></div>
-                </center>
-            </div>
-            <div id="test">
-                <div id="Seleccionar" class="row">
-                    <button class="col-3 col-extrasmall-3 charcont2" id="cab2" onclick="seleccionar('caballero')">
-                        <div id="cabSalto"></div>
-                    </button>
-                    <button class="col-3 col-extrasmall-3 charcont2" id="demon2" onclick="seleccionar('demon')">
-                        <div id="demSal"></div>
-                    </button>
-                    <button class="col-3 col-extrasmall-3 charcont2" id="lobo2" onclick="seleccionar('lobo')">
-                        <div id="lobosalto"></div>
-                    </button>
-                    <button class="col-3 col-extrasmall-3 charcont2" id="samurai2" onclick="seleccionar('samurai')">
-                        <div id="samcorrer"></div>
-                    </button>
+        <div class="row">
+            <div class="col-md-4 col-xs-12 col-extrasmall-12">
+                <div class="row">
+                    Puntuacion
                 </div>
-        </div>
+            </div>
+            <div class="col-md-8 col-xs-12 col-extrasmall-12" id="main">
+                <div class="cont">
+                    <div id="buttonContainer">
+                        <button id="butt">Iniciar partida</button>
+                    </div>
+                    <!--Div de aparicion de imagenes-->
+                    <div class="bar" id="simon">
+                        <div id="simonInsertar"></div>
+                    </div>
+                    
+                    <!--Counter de rondas-->
+                    <div class="bar">
+                        <center><h3>Ronda Número: <span id="roundCounter"></span></h3></center>
+                    </div>
+                    
+                    <!--Contenido principal de interaccion-->
+                    <div class="bar">
             
+                        <div id="test">
+                            <center>
+                                <div id="Seleccionar"><h3>Pulsa en orden los personajes<span id="countRestantes"></span></h3></div>
+                            </center>
+                        </div>
+                        <div id="test">
+                            <div id="Seleccionar" class="row">
+                                <button class="col-3 col-extrasmall-3 charcont2" id="cab2" onclick="seleccionar('caballero')">
+                                    <div id="cabSalto"></div>
+                                </button>
+                                <button class="col-3 col-extrasmall-3 charcont2" id="demon2" onclick="seleccionar('demon')">
+                                    <div id="demSal"></div>
+                                </button>
+                                <button class="col-3 col-extrasmall-3 charcont2" id="lobo2" onclick="seleccionar('lobo')">
+                                    <div id="lobosalto"></div>
+                                </button>
+                                <button class="col-3 col-extrasmall-3 charcont2" id="samurai2" onclick="seleccionar('samurai')">
+                                    <div id="samcorrer"></div>
+                                </button>
+                            </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+   
     <div class="bar">
         <center>Esto es una movida</center>
     </div>
