@@ -3,12 +3,11 @@
     src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 body{
-    background: black!important;
+    background-image: url('../assets/fantasy-05e34f7bfyhne5vg.jpg')!important;
+    background-repeat: no-repeat;
     font-family: robot!important;
 }
 .container{
-    background: black;
-    border: 2px solid white;
     padding: 20px;
     border-radius: 10px;
 }
