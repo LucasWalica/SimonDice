@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // boton inicio
     let iniciarButt = document.querySelector('#butt');
+    
     iniciarButt.addEventListener('click', function(){
         simonRandom();
         rondas=1;
@@ -48,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if(eleccionesJugador.join('')===eleccionesSimon.join('') && eleccionesJugador.length === eleccionesSimon.length){
             simonRandom();
             rondas++;
+            puntos++;
+            maxPoints.innerHTML = puntos;
             contadorRondas = document.querySelector('#roundCounter');
             contadorRondas.innerHTML = rondas;
             let rondaFin = document.querySelector('#rondaFin');
@@ -62,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contadorRondas.innerHTML = rondas;
             let rondaFin = document.querySelector('#rondaFin');
             rondaFin.innerHTML = "Has Perdido la ronda.";
+
             simonRandom();
         }
     }
@@ -80,5 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    function popUp(){
+
+    };
+    
     agregarListeners();               
 });
