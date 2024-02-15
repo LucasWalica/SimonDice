@@ -8,9 +8,15 @@ function seleccionar(data){
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    
+    // mejorar funcionalidad finalizar partida
+    const popUp = document.createElement('div');
+    popUp.id = 'popUp';
+    popUp.innerHTML = '<div id="popUp"><h2>Has perdido la partida en la ronda <span id="puntuacion"></span></h2><center><button id="aceptar">Aceptar</button></center></div>';
+
     let rondas = 0;
     let contadorRondas = document.querySelector('#roundCounter');
+    
+
     // se necesitará crear constantes de las cartas 
     function simonRandom(){
 
@@ -37,36 +43,44 @@ document.addEventListener('DOMContentLoaded', function() {
     let iniciarButt = document.querySelector('#butt');
     
     iniciarButt.addEventListener('click', function(){
+        eleccionesJugador = [];
+        eleccionesSimon = [];
         simonRandom();
         rondas=1;
         contadorRondas = document.querySelector('#roundCounter');
         contadorRondas.innerHTML = rondas;
     });
 
-
-
     function compararElecciones(){
+        
         if(eleccionesJugador.join('')===eleccionesSimon.join('') && eleccionesJugador.length === eleccionesSimon.length){
             simonRandom();
             rondas++;
-            puntos++;
-            maxPoints.innerHTML = puntos;
             contadorRondas = document.querySelector('#roundCounter');
             contadorRondas.innerHTML = rondas;
-            let rondaFin = document.querySelector('#rondaFin');
-            rondaFin.innerHTML = "Has Ganado la ronda.";
             eleccionesJugador = [];
         }
+        
         else if(eleccionesJugador.join('')!==eleccionesSimon.join('') && eleccionesJugador.length===eleccionesSimon.length) {
+            
             eleccionesJugador = [];
             eleccionesSimon = [];
+            document.querySelector('.container').appendChild(popUp);
+            const spanPuntuacion = document.querySelector('#puntuacion');
+            spanPuntuacion.innerHTML = rondas;
+            
+            popUp.addEventListener('click', function(){
+                const container = document.querySelector('.container');
+                const popUpRemove = document.querySelector('#popUp');
+                container.removeChild(popUpRemove);
+            });
+
             rondas = 1;
             contadorRondas = document.querySelector('#roundCounter');
             contadorRondas.innerHTML = rondas;
-            let rondaFin = document.querySelector('#rondaFin');
-            rondaFin.innerHTML = "Has Perdido la ronda.";
-
+            
             simonRandom();
+
         }
     }
     let botonesJugador = document.querySelectorAll('.charcont2');
@@ -84,10 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
-    function popUp(){
-
-    };
+        
     
     agregarListeners();               
 });

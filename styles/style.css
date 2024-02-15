@@ -85,27 +85,33 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
-    color: black;
+    background: linear-gradient(black, grey);
+    color: white;
     text-shadow: 2px 2px 2px grey;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 999; 
-    border-radius: 5px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
     box-shadow: 4px 4px 4px grey;
   }
 #popUp button{
-    border-radius: 20px;
     padding: 10px;
-    background: linear-gradient(pink, magenta);
-    border: 2px solid black;
+    border-radius: 20px;
+    background: linear-gradient(pink, aquamarine);
+    border: 2px solid magenta;
     color: black;
-    text-shadow: 2px 2px 2px grey;
+    text-shadow: 1px 2px 2px grey;
 }
 #popUp button:hover{
-    padding-left: 15px;
-    padding-right: 15px;
     transition: 0.3s;
-    background: linear-gradient(magenta, pink);
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    background: linear-gradient(magenta, blue);
 }
-  
+#popUp button:active{
+    transition: 0.2s;
+    color: whitesmoke;
+    background: linear-gradient(red, violet);
+}
