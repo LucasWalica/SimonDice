@@ -75,11 +75,21 @@
     background: linear-gradient(rgb(60, 162, 162),rgb(45, 137, 107));
     transition: 0.3s;
 }
+#cab2:active{
+    background: linear-gradient(rgb(44, 111, 111),rgb(29, 80, 63));
+    transition: 0.3s;
+    border: 2px solid black;
+}
 #demon{background: linear-gradient(red, magenta);}
 #demon2{background: linear-gradient(red, magenta);}
 #demon2:hover{
     background: linear-gradient(rgb(92, 40, 92), rgb(114, 17, 17));
     transition: 0.3s;
+}
+#demon2:active {
+    background: linear-gradient(rgb(64, 29, 64), rgb(79, 17, 17));
+    transition: 0.3s;
+    border: 2px solid black;
 }
 #lobo{background: linear-gradient(green, greenyellow);}
 #lobo2{background: linear-gradient(green, greenyellow);}
@@ -87,9 +97,19 @@
     background: linear-gradient(rgb(76, 101, 40), rgb(7, 72, 7));
     transition: 0.3s;
 }
+#lobo2:active{
+    background: linear-gradient(rgb(56, 73, 31), rgb(11, 58, 11));
+    transition: 0.3s;
+    border: 2px solid black;
+}
 #samurai{background: linear-gradient(yellow, goldenrod);}
 #samurai2{background: linear-gradient(yellow, goldenrod);}
 #samurai2:hover{
     background: linear-gradient(rgb(112, 96, 56), rgb(87, 87, 11));
     transition: 0.3s;
+}
+#samurai2:active{
+    background: linear-gradient(rgb(69, 59, 34), rgb(67, 67, 13));
+    transition: 0.3s;
+    border: 2px solid black;
 }
